@@ -1,0 +1,382 @@
+/* ========================================
+   MALAZA BE - Thème sombre
+   ======================================== */
+
+/* Variables pour le thème sombre */
+[data-theme="dark"] {
+    /* Couleurs principales */
+    --primary: #4d94ff;
+    --secondary: #868e96;
+    --success: #51cf66;
+    --danger: #ff6b6b;
+    --warning: #ffd43b;
+    --info: #339af0;
+    --light: #495057;
+    --dark: #212529;
+    
+    /* Couleurs de fond */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3a3a3a;
+    
+    /* Couleurs de texte */
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --text-muted: #6c757d;
+    
+    /* Bordures */
+    --border-color: #495057;
+    
+    /* Ombres */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 2px 6px rgba(0,0,0,0.3);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Ajustements spécifiques pour le thème sombre */
+[data-theme="dark"] .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .nav-item {
+    color: rgba(255,255,255,0.7);
+}
+
+[data-theme="dark"] .nav-item:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .nav-item.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+[data-theme="dark"] .theme-toggle {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Formulaires en mode sombre */
+[data-theme="dark"] .form-control {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--bg-secondary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(77,148,255,0.2);
+}
+
+[data-theme="dark"] select.form-control option {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Tables en mode sombre */
+[data-theme="dark"] .table {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .table th {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table td {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table tbody tr:hover {
+    background-color: rgba(255,255,255,0.03);
+}
+
+/* Cartes et sections */
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .employee-card,
+[data-theme="dark"] .report-card,
+[data-theme="dark"] .attendance-container,
+[data-theme="dark"] .salary-container,
+[data-theme="dark"] .leaves-container,
+[data-theme="dark"] .payments-container,
+[data-theme="dark"] .employees-section,
+[data-theme="dark"] .quick-actions {
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .employee-attendance,
+[data-theme="dark"] .employee-leave-card,
+[data-theme="dark"] .report-section {
+    background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .action-btn {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .action-btn:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--primary);
+}
+
+/* Modals en mode sombre */
+[data-theme="dark"] .modal {
+    background-color: rgba(0,0,0,0.7);
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .close-btn {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .close-btn:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Alerts en mode sombre */
+[data-theme="dark"] .alert-success {
+    background-color: rgba(81,207,102,0.1);
+    color: #51cf66;
+    border-color: rgba(81,207,102,0.3);
+}
+
+[data-theme="dark"] .alert-danger {
+    background-color: rgba(255,107,107,0.1);
+    color: #ff6b6b;
+    border-color: rgba(255,107,107,0.3);
+}
+
+[data-theme="dark"] .alert-warning {
+    background-color: rgba(255,212,59,0.1);
+    color: #ffd43b;
+    border-color: rgba(255,212,59,0.3);
+}
+
+[data-theme="dark"] .alert-info {
+    background-color: rgba(51,154,240,0.1);
+    color: #339af0;
+    border-color: rgba(51,154,240,0.3);
+}
+
+/* Badges en mode sombre */
+[data-theme="dark"] .badge {
+    opacity: 0.9;
+}
+
+/* Boutons en mode sombre */
+[data-theme="dark"] .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #3d7acc;
+    border-color: #3d7acc;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* Attendance colors adjustment */
+[data-theme="dark"] .attendance-day {
+    filter: brightness(0.9);
+}
+
+[data-theme="dark"] .attendance-day:hover {
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .attendance-day.disabled {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--text-muted);
+}
+
+/* Charts en mode sombre */
+[data-theme="dark"] .simple-chart {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .chart-bar {
+    filter: brightness(0.9);
+}
+
+/* Login en mode sombre */
+[data-theme="dark"] .login-container {
+    background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .login-card {
+    background-color: var(--bg-secondary);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] .login-header h1 {
+    color: var(--primary);
+}
+
+/* Scrollbar en mode sombre */
+[data-theme="dark"] ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Ajustements pour les inputs de date/mois */
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="month"] {
+    color-scheme: dark;
+}
+
+/* Month sections */
+[data-theme="dark"] .month-header {
+    background-color: var(--bg-tertiary);
+}
+
+/* Report cards status */
+[data-theme="dark"] .report-card.paid {
+    border-color: var(--success);
+    background-color: rgba(81,207,102,0.05);
+}
+
+[data-theme="dark"] .report-card.unpaid {
+    border-color: var(--warning);
+    background-color: rgba(255,212,59,0.05);
+}
+
+/* Empty states */
+[data-theme="dark"] .empty-state {
+    color: var(--text-secondary);
+}
+
+/* Notifications en mode sombre */
+[data-theme="dark"] .notification {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Payment info box */
+[data-theme="dark"] .payment-info {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+/* Summary boxes */
+[data-theme="dark"] .attendance-summary {
+    background-color: var(--bg-tertiary);
+}
+
+/* Legend items */
+[data-theme="dark"] .legend-color {
+    border: 1px solid var(--border-color);
+}
+
+/* Focus styles pour l'accessibilité */
+[data-theme="dark"] *:focus {
+    outline-color: var(--primary);
+}
+
+/* Transitions douces pour le changement de thème */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Animation du toggle */
+.theme-toggle {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:active {
+    transform: scale(0.9);
+}
+
+/* Ajustements finaux */
+[data-theme="dark"] .text-primary {
+    color: var(--primary) !important;
+}
+
+[data-theme="dark"] .text-danger {
+    color: var(--danger) !important;
+}
+
+[data-theme="dark"] .text-success {
+    color: var(--success) !important;
+}
+
+[data-theme="dark"] .text-warning {
+    color: var(--warning) !important;
+}
+
+[data-theme="dark"] .text-info {
+    color: var(--info) !important;
+}
+
+/* Fix pour les éléments qui pourraient avoir des problèmes de contraste */
+[data-theme="dark"] .summary-item {
+    font-weight: 600;
+}
+
+[data-theme="dark"] code {
+    background-color: var(--bg-tertiary);
+    color: var(--primary);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Amélioration de la lisibilité des textes importants */
+[data-theme="dark"] strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Style pour les liens si vous en ajoutez */
+[data-theme="dark"] a {
+    color: var(--primary);
+}
+
+[data-theme="dark"] a:hover {
+    color: #6ba3ff;
+}
+
+/* Fin du thème sombre */
